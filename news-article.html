@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - SLIMES Research Group</title>
+    <link rel="icon" type="image/png" href="assets/images/branding/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.0/marked.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="assets/images/branding/SLIMES-logo.svg" alt="SLIMES Research Group" class="logo-image">
+                    <img src="assets/images/branding/favicon.png" alt="SLIMES Research Group" class="logo-favicon">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="publications.html" class="nav-link">Publications</a>
+
+                <!-- Group Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        Group <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="group/members.html">
+                            <i class="fas fa-users"></i> Members
+                        </a>
+                        <a href="group/open-positions.html">
+                            <i class="fas fa-briefcase"></i> Open Positions
+                        </a>
+                        <a href="group/gallery.html">
+                            <i class="fas fa-camera"></i> Gallery
+                        </a>
+                    </div>
+                </div>
+
+                <a href="news.html" class="nav-link active">News</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="research.html" class="mobile-nav-link">Research</a>
+            <a href="publications.html" class="mobile-nav-link">Publications</a>
+
+            <!-- Mobile Group Dropdown -->
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    Group <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="group/members.html">
+                        <i class="fas fa-users"></i> Members
+                    </a>
+                    <a href="group/open-positions.html">
+                        <i class="fas fa-briefcase"></i> Open Positions
+                    </a>
+                    <a href="group/gallery.html">
+                        <i class="fas fa-camera"></i> Gallery
+                    </a>
+                </div>
+            </div>
+
+            <a href="news.html" class="mobile-nav-link">News</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-overlay"></div>
+        <div class="container">
+            <h1 id="article-title">Loading...</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li class="current" id="breadcrumb-title">Article</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Loading Indicator -->
+    <div id="article-loader" class="publications-loader">
+        <div class="loader-spinner"></div>
+        <p>Loading article...</p>
+    </div>
+
+    <!-- Article Content -->
+    <section class="news-detail-section" id="article-section">
+        <div class="container">
+            <article class="news-detail">
+                <!-- Article Header -->
+                <div class="article-header">
+                    <img id="article-image" src="" alt="" class="article-featured-image">
+                    <div class="article-meta">
+                        <div class="meta-info">
+                            <span class="author">
+                                <i class="fas fa-user"></i>
+                                <span id="article-author"></span>
+                            </span>
+                            <span class="date">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span id="article-date"></span>
+                            </span>
+                        </div>
+                        <div class="article-tags" id="article-tags"></div>
+                    </div>
+                </div>
+
+                <!-- Markdown Content -->
+                <div class="article-content markdown-content" id="article-content">
+                    <!-- Markdown will be rendered here -->
+                </div>
+
+                <!-- Back to News -->
+                <div class="article-footer">
+                    <a href="news.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to News
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Error Message -->
+    <section class="error-section" id="error-section">
+        <div class="container">
+            <div class="error-message">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Article Not Found</h2>
+                <p>Sorry, the article you're looking for could not be found.</p>
+                <a href="news.html" class="btn btn-primary">Back to News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Research Group</h4>
+                    <p>Advancing materials modeling and simulation using emerging AI approaches.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="group/members.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>London South Bank University<br>
+                        103 Borough Road<br>
+                        London SE1 0AA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/slimeslab" target="_blank" title="GitHub"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/lab/SLIMES-Lab-John-Buckeridge" target="_blank"
+                            title="ResearchGate" rel="noopener noreferrer"><i class="ai ai-researchgate"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><a href="index.html" class="brand-name">SLIMES Lab</a> &copy; <span id="copyright-year">2025</span>.
+                    All rights reserved. Made With ❤️ by <a href="https://aritraroy.live/" target="_blank"
+                        rel="noopener noreferrer">Aritra Roy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/news-article.js"></script>
+</body>
+
+</html>

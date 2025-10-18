@@ -1,0 +1,194 @@
+{
+  "currentMembers": {
+    "postdocs": [
+      {
+        "name": "Dr. Sarah Wilson",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "Postdoctoral Research Fellow",
+        "researchTopic": "Machine learning for materials discovery, perovskite solar cells",
+        "email": "s.wilson@lsbu.ac.uk",
+        "website": null,
+        "linkedin": "https://linkedin.com/in/sarah-wilson",
+        "googleScholar": null,
+        "github": null
+      },
+      {
+        "name": "Dr. Michael Chen",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "Postdoctoral Research Fellow",
+        "researchTopic": "Quantum simulations, 2D materials, electronic structure theory",
+        "email": "m.chen@lsbu.ac.uk",
+        "website": null,
+        "linkedin": null,
+        "googleScholar": "https://scholar.google.com/citations?user=example",
+        "github": null
+      }
+    ],
+    "phdStudents": [
+      {
+        "name": "Alice Johnson",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "PhD Student (3rd Year)",
+        "researchTopic": "Defect engineering in oxide materials for catalytic applications",
+        "email": "a.johnson@lsbu.ac.uk",
+        "website": null,
+        "linkedin": null,
+        "googleScholar": null,
+        "github": null
+      },
+      {
+        "name": "David Martinez",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "PhD Student (2nd Year)",
+        "researchTopic": "High-throughput screening of battery electrode materials",
+        "email": "d.martinez@lsbu.ac.uk",
+        "website": null,
+        "linkedin": null,
+        "googleScholar": null,
+        "github": "https://github.com/dmartinez"
+      },
+      {
+        "name": "Emma Thompson",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "PhD Student (1st Year)",
+        "researchTopic": "Neural network potentials for materials simulation",
+        "email": "e.thompson@lsbu.ac.uk",
+        "website": null,
+        "linkedin": "https://linkedin.com/in/emma-thompson",
+        "googleScholar": null,
+        "github": null
+      }
+    ],
+    "mastersStudents": [
+      {
+        "name": "James Lee",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "MSc Student",
+        "researchTopic": "Molecular dynamics simulations of ionic conductors",
+        "email": "j.lee@lsbu.ac.uk",
+        "website": null,
+        "linkedin": null,
+        "googleScholar": null,
+        "github": null
+      },
+      {
+        "name": "Sofia Rodriguez",
+        "image": "assets/images/team/member-placeholder.jpg",
+        "position": "MSc Student",
+        "researchTopic": "Machine learning for property prediction in organic semiconductors",
+        "email": "s.rodriguez@lsbu.ac.uk",
+        "website": null,
+        "linkedin": null,
+        "googleScholar": null,
+        "github": null
+      }
+    ],
+    "bachelorsStudents": []
+  },
+  "alumni": [
+    {
+      "name": "Dr. Aritra Biswas",
+      "currentPosition": "Postdoctoral Researcher at Oxford University",
+      "groupPosition": "PhD Student",
+      "duration": "2020-2023",
+      "researchTitle": "Computational Design of Stable Perovskite Materials for Photovoltaic Applications",
+      "email": "aritra.biswas@oxford.ac.uk",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null,
+      "github": null
+    },
+    {
+      "name": "Dr. Lisa Wang",
+      "currentPosition": "Senior Materials Scientist at Tesla",
+      "groupPosition": "Postdoctoral Researcher",
+      "duration": "2019-2022",
+      "researchTitle": "Machine Learning Approaches for Battery Materials Discovery",
+      "email": "lisa.wang@tesla.com",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null,
+      "github": null
+    },
+    {
+      "name": "Dr. Thomas Brown",
+      "currentPosition": "Lecturer at University of Cambridge",
+      "groupPosition": "PhD Student",
+      "duration": "2018-2022",
+      "researchTitle": "Quantum Confinement Effects in 2D Semiconductor Materials",
+      "email": "tb123@cam.ac.uk",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null,
+      "github": null
+    },
+    {
+      "name": "Dr. Priya Patel",
+      "currentPosition": "Principal Scientist at Microsoft Research",
+      "groupPosition": "Postdoctoral Researcher",
+      "duration": "2017-2020",
+      "researchTitle": "Topological Materials for Quantum Computing Applications",
+      "email": "priya.patel@microsoft.com",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null,
+      "github": null
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Prof. David Johnson",
+      "institute": "University of Oxford - Theoretical Chemistry",
+      "papersCount": 8,
+      "email": "david.johnson@chem.ox.ac.uk",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    },
+    {
+      "name": "Prof. Maria Garcia",
+      "institute": "Imperial College London - Materials Science",
+      "papersCount": 5,
+      "email": "m.garcia@imperial.ac.uk",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    },
+    {
+      "name": "Prof. Robert Smith",
+      "institute": "University of Cambridge - Engineering",
+      "papersCount": 12,
+      "email": "rs@eng.cam.ac.uk",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    },
+    {
+      "name": "Dr. Jennifer Miller",
+      "institute": "NREL (USA) - Solar Energy Research",
+      "papersCount": 6,
+      "email": "jennifer.miller@nrel.gov",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    },
+    {
+      "name": "Prof. Klaus Weber",
+      "institute": "Max Planck Institute - Computational Physics",
+      "papersCount": 15,
+      "email": "weber@mpi.de",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    },
+    {
+      "name": "Dr. Sarah Kim",
+      "institute": "Toyota Research Institute - Materials Discovery",
+      "papersCount": 4,
+      "email": "sarah.kim@tri.global",
+      "website": null,
+      "linkedin": null,
+      "googleScholar": null
+    }
+  ]
+}

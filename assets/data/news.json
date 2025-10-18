@@ -1,0 +1,32 @@
+[
+  {
+    "id": "dynamics-for-gc3n4",
+    "title": "1st PhD Publication by Md. Maruf Mridha",
+    "author": "Dr. John Buckeridge",
+    "date": "2025-08-15",
+    "excerpt": "1st PhD Publication by Md. Maruf Mridha in The Journal of Physical Chemistry C: Using dynamics to determine the ground state properties of g-C3N4.",
+    "image": "assets/images/news/2025/using-dynamics-to-determine-the-ground-state-properties-of-g-C3N4.jpeg",
+    "link": "news/2025/using-dynamics-for-g-C3N4.html",
+    "markdown": "assets/content/news/2025/using-dynamics-for-g-C3N4.md",
+    "tags": [
+      "PhD Publication",
+      "g-C3N4",
+      "Dynamics"
+    ]
+  },
+  {
+    "id": "surray-hills-trip",
+    "title": "MADD Day Trip to Surrey Hills",
+    "author": "Aritra Roy",
+    "date": "2024-09-20",
+    "excerpt": "A wonderful day trip to Surrey Hills with the MADD research group, exploring the beautiful countryside and strengthening team bonds.",
+    "image": "assets/images/news/2024/surray_hills.webp",
+    "link": "news/2024/surray-hills-trip.html",
+    "markdown": "assets/content/news/2024/surray-hills-trip.md",
+    "tags": [
+      "Team Building",
+      "Outings",
+      "MADD"
+    ]
+  }
+]

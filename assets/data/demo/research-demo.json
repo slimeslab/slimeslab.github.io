@@ -1,0 +1,56 @@
+[
+  {
+    "id": "defect-chemistry-oxides",
+    "title": "Defect Chemistry in Oxides",
+    "tag": "research-topics",
+    "image": "assets/images/research/research-1.jpg",
+    "github": null,
+    "website": null,
+    "documentation": null
+  },
+  {
+    "id": "py-sc-fermi",
+    "title": "py-sc-fermi",
+    "tag": "software-codes",
+    "image": "assets/images/research/research-2.jpg",
+    "github": "https://github.com/example/py-sc-fermi",
+    "website": "https://py-sc-fermi.example.com",
+    "documentation": "https://py-sc-fermi.readthedocs.io"
+  },
+  {
+    "id": "transparent-conducting-oxides",
+    "title": "Transparent Conducting Oxides",
+    "tag": "research-topics",
+    "image": "assets/images/research/research-3.jpg",
+    "github": null,
+    "website": null,
+    "documentation": null
+  },
+  {
+    "id": "carrier-capture",
+    "title": "CarrierCapture.jl",
+    "tag": "software-codes",
+    "image": "assets/images/research/research-4.jpg",
+    "github": "https://github.com/example/CarrierCapture.jl",
+    "website": "https://carriercapture.example.com",
+    "documentation": "https://carriercapture.readthedocs.io"
+  },
+  {
+    "id": "perovskite-solar-cells",
+    "title": "Perovskite Solar Cells",
+    "tag": "research-topics",
+    "image": "assets/images/research/research-5.jpg",
+    "github": null,
+    "website": null,
+    "documentation": null
+  },
+  {
+    "id": "battery-materials",
+    "title": "Battery Materials Modeling",
+    "tag": "research-topics",
+    "image": "assets/images/research/research-6.jpg",
+    "github": null,
+    "website": null,
+    "documentation": null
+  }
+]

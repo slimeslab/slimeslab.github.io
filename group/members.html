@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - SLIMES Research Group</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/branding/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../">
+                    <img src="../assets/images/branding/SLIMES-logo.svg" alt="SLIMES Research Group" class="logo-image">
+                    <img src="../assets/images/branding/favicon.png" alt="SLIMES Research Group" class="logo-favicon">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../research.html" class="nav-link">Research</a>
+                <a href="../publications.html" class="nav-link">Publications</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Group <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="members.html">
+                            <i class="fas fa-users"></i> Members
+                        </a>
+                        <a href="open-positions.html">
+                            <i class="fas fa-briefcase"></i> Open Positions
+                        </a>
+                        <a href="gallery.html">
+                            <i class="fas fa-camera"></i> Gallery
+                        </a>
+                    </div>
+                </div>
+                <a href="../news.html" class="nav-link">News</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="../about.html" class="mobile-nav-link">About</a>
+            <a href="../research.html" class="mobile-nav-link">Research</a>
+            <a href="../publications.html" class="mobile-nav-link">Publications</a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Group <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-content">
+                    <a href="members.html">
+                        <i class="fas fa-users"></i> Members
+                    </a>
+                    <a href="open-positions.html">
+                        <i class="fas fa-briefcase"></i> Open Positions
+                    </a>
+                    <a href="gallery.html">
+                        <i class="fas fa-camera"></i> Gallery
+                    </a>
+                </div>
+            </div>
+            <a href="../news.html" class="mobile-nav-link">News</a>
+            <a href="../contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-overlay"></div>
+        <div class="container">
+            <h1>Our Team</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-nav">
+                    <li><a href="/">Home</a></li>
+                    <li class="current">Team</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Team Leader -->
+    <section class="team-leader">
+        <div class="container">
+            <div class="section-header">
+                <h2>Principal Investigator</h2>
+                <p>Meet the leader of our research group</p>
+            </div>
+            <div class="leader-profile">
+                <div class="leader-image">
+                    <img src="../assets/images/team/john-buckeridge.jpg" alt="Dr. John Buckeridge">
+                </div>
+                <div class="leader-info">
+                    <h3>Dr. John Buckeridge</h3>
+                    <p class="position">Senior Lecturer in Thermofluids and Turbomachinery</p>
+                    <p class="description">Dr. John Buckeridge leads our research group with expertise in computational
+                        materials science, focusing on defects in semiconductors and energy materials. His work bridges
+                        theoretical modeling with practical applications in sustainable technology.</p>
+
+                    <div class="expertise">
+                        <h4>Research Expertise:</h4>
+                        <ul>
+                            <li>Density Functional Theory</li>
+                            <li>Defect Physics in Semiconductors</li>
+                            <li>Energy Materials</li>
+                            <li>Machine Learning for Materials</li>
+                        </ul>
+                    </div>
+
+                    <div class="member-contact">
+                        <a href="mailto:j.buckeridge@lsbu.ac.uk" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://jbuckeridge.github.io/" target="_blank" rel="noopener noreferrer"
+                            title="Website"><i class="fas fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/john-buckeridge-05642918/" target="_blank"
+                            rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://scholar.google.co.uk/citations?user=hfyoL4AAAAAJ&hl=en" target="_blank"
+                            rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                        <a href="https://github.com/jbuckeridge" target="_blank" rel="noopener noreferrer"
+                            title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Members -->
+    <section class="current-members">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Members</h2>
+                <p>Our talented team of researchers and students</p>
+            </div>
+            <!-- Members will be dynamically loaded here -->
+            <div id="current-members-container"></div>
+        </div>
+    </section>
+
+    <!-- Alumni -->
+    <section class="alumni">
+        <div class="container">
+            <div class="section-header">
+                <h2>Alumni</h2>
+                <p>Former members who have gone on to exciting careers</p>
+            </div>
+            <!-- Alumni will be dynamically loaded here -->
+            <div class="alumni-grid" id="alumni-container"></div>
+        </div>
+    </section>
+
+    <!-- Collaborators -->
+    <section class="collaborators">
+        <div class="container">
+            <div class="section-header">
+                <h2>Collaborators</h2>
+                <p>We work with leading research groups worldwide</p>
+            </div>
+            <!-- Collaborators will be dynamically loaded here -->
+            <div class="collaborator-grid" id="collaborators-container"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Research Group</h4>
+                    <p>Advancing materials modeling and simulation using emerging AI approaches.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../research.html">Research</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../group/members.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>London South Bank University<br>
+                        103 Borough Road<br>
+                        London SE1 0AA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/slimeslab" target="_blank" title="GitHub"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.researchgate.net/lab/SLIMES-Lab-John-Buckeridge" target="_blank"
+                            title="ResearchGate" rel="noopener noreferrer"><i class="ai ai-researchgate"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><a href="../index.html" class="brand-name">SLIMES Lab</a> &copy; <span
+                        id="copyright-year">2025</span>. All rights reserved. Made With ❤️ by <a
+                        href="https://aritraroy.live/" target="_blank" rel="noopener noreferrer">Aritra Roy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/members.js"></script>
+</body>
+
+</html>

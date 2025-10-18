@@ -1,0 +1,64 @@
+[
+  {
+    "id": "surray-hills-trip",
+    "title": "MADD Day Trip to Surrey Hills",
+    "author": "Aritra Roy",
+    "date": "2024-09-20",
+    "excerpt": "A wonderful day trip to Surrey Hills with the MADD research group, exploring the beautiful countryside and strengthening team bonds.",
+    "image": "assets/images/news/2024/surray_hills.webp",
+    "link": "news/2024/surray-hills-trip.html",
+    "markdown": "assets/content/news/surray-hills-trip.md",
+    "tags": ["Team Building", "Outings", "MADD"]
+  },
+  {
+    "id": "ai-materials-discovery",
+    "title": "AI-Driven Materials Discovery: A New Frontier",
+    "author": "Dr. John Buckeridge",
+    "date": "2024-01-15",
+    "excerpt": "Exploring how artificial intelligence is revolutionizing the way we discover and design new materials for sustainable technology applications.",
+    "image": "assets/images/news/news1.jpg",
+    "link": "news/2024/ai-materials-discovery.html",
+    "markdown": "assets/content/news/ai-materials-discovery.md",
+    "tags": ["Machine Learning", "Materials Discovery", "AI"]
+  },
+  {
+    "id": "computational-challenges",
+    "title": "Overcoming Computational Challenges in Materials Modeling",
+    "author": "Research Team",
+    "date": "2024-03-08",
+    "excerpt": "Discussing the latest advances in high-performance computing and how they're enabling more accurate materials simulations.",
+    "image": "assets/images/news/news4.jpg",
+    "link": "news/2024/computational-challenges.html",
+    "tags": ["HPC", "Simulation", "Computing"]
+  },
+  {
+    "id": "sustainable-electronics",
+    "title": "The Future of Sustainable Electronics",
+    "author": "Research Team",
+    "date": "2023-12-20",
+    "excerpt": "The future of electronics lies in sustainable materials that reduce environmental impact while maintaining high performance.",
+    "image": "assets/images/news/news2.jpg",
+    "link": "news/2023/sustainable-electronics.html",
+    "tags": ["Sustainability", "Electronics", "Environment"]
+  },
+  {
+    "id": "quantum-simulations",
+    "title": "Quantum Simulations in Materials Science",
+    "author": "PhD Student",
+    "date": "2023-11-30",
+    "excerpt": "How quantum computing is opening new possibilities for materials simulation and what this means for the future of research.",
+    "image": "assets/images/news/news3.jpg",
+    "link": "news/2023/quantum-simulations.html",
+    "tags": ["Quantum Computing", "Simulation", "Future Tech"]
+  },
+  {
+    "id": "defect-engineering",
+    "title": "Defect Engineering: Turning Flaws into Features",
+    "author": "Dr. John Buckeridge",
+    "date": "2023-09-15",
+    "excerpt": "Understanding how controlled defects in materials can actually improve their properties and performance in various applications.",
+    "image": "assets/images/news/news5.jpg",
+    "link": "news/2023/defect-engineering.html",
+    "tags": ["Defects", "Engineering", "Materials Science"]
+  }
+]
