@@ -11,12 +11,14 @@ This is the official research group website showcasing our work in computational
 ## Features
 
 ### Content Management
+
 - **JSON-Driven Content**: Research topics, team members, collaborators, alumni, open positions, and gallery images managed via JSON files
 - **Markdown Support**: News articles written in Markdown with front matter metadata
 - **Dynamic Rendering**: Client-side rendering using JavaScript for flexible content updates
 - **BibTeX Integration**: Publications automatically loaded from BibTeX file via BibBase
 
 ### Design & User Experience
+
 - **Modern Responsive Design**: Mobile-first approach with optimized layouts for all devices
 - **Custom Branding**: SLIMES-specific color scheme and logo
 - **Interactive Elements**:
@@ -27,6 +29,7 @@ This is the official research group website showcasing our work in computational
 - **Accessibility**: Semantic HTML, ARIA labels, keyboard navigation support
 
 ### Pages & Sections
+
 - **Home**: Hero section with typing animation, statistics, objectives, group leader profile, recent news
 - **About**: Group overview and research philosophy
 - **Research**: Topics, methods, and software/code with optional links (GitHub, documentation, papers)
@@ -43,11 +46,13 @@ This is the official research group website showcasing our work in computational
 ## Technical Stack
 
 ### Core Technologies
+
 - **HTML5**: Semantic markup
 - **CSS3**: Custom properties, flexbox, grid layouts
 - **Vanilla JavaScript**: No frameworks, pure JS for optimal performance
 
 ### Libraries & Services
+
 - **Font Awesome 6.4.0**: Icon library
 - **Academicons**: Academic/research icons (Google Scholar, ResearchGate, ORCID)
 - **Marked.js 11.1.0**: Markdown to HTML conversion
@@ -56,6 +61,7 @@ This is the official research group website showcasing our work in computational
 - **Google Maps Embed API**: Location map on contact page
 
 ### Performance
+
 - **Static Site**: Fast loading, no server-side processing
 - **Lazy Loading**: Images loaded on demand
 - **Optimized Assets**: Minimal dependencies, efficient code
@@ -154,6 +160,7 @@ Edit `assets/data/research.json` to add/modify research topics and software.
 ### Managing Team Members
 
 Edit `assets/data/members.json` to update:
+
 - Current members (postdocs, PhD students, Master's, Bachelor's)
 - Alumni with current positions
 - Collaborators
@@ -161,10 +168,6 @@ Edit `assets/data/members.json` to update:
 ### Adding Open Positions
 
 Edit `assets/data/positions.json` with position details.
-
-### Updating Publications
-
-Add entries to `assets/data/publications.bib` in BibTeX format.
 
 ### Managing Gallery
 
@@ -189,6 +192,7 @@ This website and its content are the intellectual property of the SLIMES Researc
 ### Third-Party Resources
 
 This site uses the following open-source libraries and services:
+
 - Font Awesome (Icons) - [Font Awesome License](https://fontawesome.com/license)
 - Academicons (Academic Icons) - [SIL OFL 1.1 License](https://github.com/jpswalsh/academicons)
 - Marked.js (Markdown Parser) - [MIT License](https://github.com/markedjs/marked)
