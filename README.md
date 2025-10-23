@@ -1,6 +1,6 @@
 # SLIMES Research Group Website
 
-Official website for the SLIMES (Simulations of Low-dimensional Materials and Electronic Structures) Research Group at London South Bank University, led by Dr. John Buckeridge.
+Official website for the SLIMES (South London Innovative Materials Evaluation Squad) Research Group at London South Bank University, led by Dr. John Buckeridge.
 
 🌐 **Live Site**: [https://slimeslab.github.io](https://slimeslab.github.io)
 
