@@ -812,6 +812,11 @@ h6 {
     font-size: 1.25rem;
 }
 
+.social-links a .huggingface-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -4050,8 +4055,8 @@ html {
 
 .article-featured-image {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 2rem;
 }
@@ -4341,7 +4346,7 @@ html {
 /* Responsive adjustments for article page */
 @media (max-width: 768px) {
     .article-featured-image {
-        height: 250px;
+        height: auto;
     }
 
     .markdown-content h1 {

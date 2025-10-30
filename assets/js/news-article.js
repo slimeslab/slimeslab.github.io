@@ -108,6 +108,24 @@
         // Update page title
         document.title = `${metadata.title} - SLIMES Research Group`;
 
+        // Update Open Graph meta tags
+        const fullImageUrl = `https://slimeslab.github.io/${metadata.image}`;
+        const ogImage = document.querySelector('meta[property="og:image"]');
+        const twitterImage = document.querySelector('meta[property="twitter:image"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+
+        if (ogImage) ogImage.setAttribute('content', fullImageUrl);
+        if (twitterImage) twitterImage.setAttribute('content', fullImageUrl);
+        if (ogTitle) ogTitle.setAttribute('content', `${metadata.title} - SLIMES Research Group`);
+        if (twitterTitle) twitterTitle.setAttribute('content', `${metadata.title} - SLIMES Research Group`);
+        if (ogDescription && metadata.excerpt) {
+            ogDescription.setAttribute('content', metadata.excerpt);
+            if (twitterDescription) twitterDescription.setAttribute('content', metadata.excerpt);
+        }
+
         // Update breadcrumb and header
         document.getElementById('article-title').textContent = metadata.title;
         document.getElementById('breadcrumb-title').textContent = metadata.title;
