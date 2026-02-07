@@ -44,7 +44,7 @@
     // Render article tags
     function renderTags(tags) {
         if (!tags || tags.length === 0) return '';
-        return tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        return tags.map(tag => `<a href="news-tags.html?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>`).join('');
     }
 
     // Configure marked.js options

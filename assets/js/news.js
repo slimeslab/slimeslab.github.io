@@ -34,7 +34,7 @@
 
     // Render news card for home page
     function renderNewsCardHome(newsItem) {
-        const tagsHTML = newsItem.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        const tagsHTML = newsItem.tags.map(tag => `<a href="news-tags.html?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>`).join('');
         const articleLink = getArticleLink(newsItem);
 
         return `
@@ -60,7 +60,7 @@
 
     // Render news card for news page
     function renderNewsCardArchive(newsItem) {
-        const tagsHTML = newsItem.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        const tagsHTML = newsItem.tags.map(tag => `<a href="news-tags.html?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>`).join('');
         const articleLink = getArticleLink(newsItem);
 
         return `

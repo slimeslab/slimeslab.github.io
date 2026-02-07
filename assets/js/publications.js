@@ -4,7 +4,7 @@
 
     const ORCID_ID = '0000-0002-2537-5082';
     const ORCID_API_URL = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
-    const MAX_PUBLICATIONS = 15;
+    const HIGHLIGHT_AUTHOR = 'Buckeridge';
 
     // Fetch publications from ORCID
     async function fetchPublications() {
@@ -27,12 +27,14 @@
         }
     }
 
-    // Fetch metadata from OA.Works API
+    // Fetch metadata from OpenAlex API
     async function fetchMetadata(doi) {
         if (!doi) return null;
 
         try {
-            const response = await fetch(`https://bg.api.oa.works/metadata?id=${doi}`);
+            const response = await fetch(`https://api.openalex.org/works/https://doi.org/${doi}`, {
+                headers: { 'Accept': 'application/json' }
+            });
             if (!response.ok) return null;
             const data = await response.json();
             return data;
@@ -73,7 +75,7 @@
         };
     }
 
-    // Enrich publication with metadata from OA.Works
+    // Enrich publication with metadata from OpenAlex
     async function enrichPublication(pub) {
         if (!pub.doi) return pub;
 
@@ -81,31 +83,35 @@
         if (!metadata) return pub;
 
         // Extract authors
-        if (metadata.author && Array.isArray(metadata.author)) {
-            pub.authors = metadata.author.map(author => {
-                const family = author.family || '';
-                const given = author.given || '';
-                if (family && given) {
-                    // Format as: Last, F.
-                    const initials = given.split(' ').map(n => n.charAt(0) + '.').join(' ');
+        if (metadata.authorships && Array.isArray(metadata.authorships)) {
+            pub.authors = metadata.authorships.map(authorship => {
+                const name = authorship.author?.display_name || '';
+                if (!name) return '';
+                // Convert "First Last" to "Last, F."
+                const parts = name.split(' ');
+                if (parts.length >= 2) {
+                    const family = parts[parts.length - 1];
+                    const initials = parts.slice(0, -1).map(n => n.charAt(0) + '.').join(' ');
                     return `${family}, ${initials}`;
-                } else if (family) {
-                    return family;
-                } else if (given) {
-                    return given;
                 }
-                return author.name || '';
-            });
+                return name;
+            }).filter(a => a);
         }
 
         // Extract volume, issue, pages
-        pub.volume = metadata.volume || null;
-        pub.issue = metadata.issue || null;
-        pub.pages = metadata.page || null;
+        const biblio = metadata.biblio || {};
+        pub.volume = biblio.volume || null;
+        pub.issue = biblio.issue || null;
+        if (biblio.first_page) {
+            pub.pages = biblio.last_page && biblio.last_page !== biblio.first_page
+                ? `${biblio.first_page}-${biblio.last_page}`
+                : biblio.first_page;
+        }
 
         // Update journal if better info available
-        if (metadata['container-title'] && !pub.journal) {
-            pub.journal = metadata['container-title'];
+        const journalName = metadata.primary_location?.source?.display_name;
+        if (journalName && !pub.journal) {
+            pub.journal = journalName;
         }
 
         return pub;
@@ -176,12 +182,17 @@
     }
 
     // Render a single publication
-    function renderPublication(pub) {
-        // Format authors
+    function renderPublication(pub, number) {
+        // Format authors with highlighted name bolded
         let authorsHTML = '';
         if (pub.authors && pub.authors.length > 0) {
-            const authorList = pub.authors.join('; ');
-            authorsHTML = authorList;
+            const formatted = pub.authors.map(author => {
+                if (author.startsWith(HIGHLIGHT_AUTHOR)) {
+                    return `<strong>${author}</strong>`;
+                }
+                return author;
+            });
+            authorsHTML = formatted.join('; ');
         }
 
         // Format journal info with volume/issue/pages
@@ -221,18 +232,21 @@
         const bibtexId = `bibtex-${Math.random().toString(36).substr(2, 9)}`;
 
         return `
-            <div class="publication-item">
-                <div class="pub-title-line">${pub.title}</div>
-                ${authorsHTML ? `<div class="pub-authors-line">${authorsHTML}</div>` : ''}
-                ${venueHTML ? `<div class="pub-venue-line">${venueHTML}</div>` : ''}
-                <div class="pub-links-line">
-                    ${links.join(' ')}
-                    <span class="bibtex-toggle" data-target="${bibtexId}">
-                        bibtex <i class="fas fa-chevron-down"></i>
-                    </span>
-                </div>
-                <div class="bibtex-content" id="${bibtexId}">
-                    <pre>${bibtex}</pre>
+            <div class="publication-row">
+                <div class="pub-number">${number}.</div>
+                <div class="publication-item">
+                    <div class="pub-title-line">${pub.title}</div>
+                    ${authorsHTML ? `<div class="pub-authors-line">${authorsHTML}</div>` : ''}
+                    ${venueHTML ? `<div class="pub-venue-line">${venueHTML}</div>` : ''}
+                    <div class="pub-links-line">
+                        ${links.join(' ')}
+                        <span class="bibtex-toggle" data-target="${bibtexId}">
+                            bibtex <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="bibtex-content" id="${bibtexId}">
+                        <pre>${bibtex}</pre>
+                    </div>
                 </div>
             </div>
         `;
@@ -243,11 +257,19 @@
         const container = document.getElementById('publications-container');
         if (!container) return;
 
+        // Count total publications for descending numbering
+        let totalCount = 0;
+        groupedPubs.forEach(pubs => { totalCount += pubs.length; });
+        let currentNumber = totalCount;
+
         let html = '';
 
         // Iterate over the Map in insertion order (which is sorted descending)
         groupedPubs.forEach((pubs, year) => {
-            const pubsHTML = pubs.map(pub => renderPublication(pub)).join('');
+            const pubsHTML = pubs.map(pub => {
+                const num = currentNumber--;
+                return renderPublication(pub, num);
+            }).join('');
 
             html += `
                 <div class="year-section">
@@ -323,43 +345,63 @@
         }
     }
 
-    // Initialize publications page
-    async function initializePublications() {
+    // Try loading pre-cached publications JSON
+    async function loadCachedPublications() {
+        try {
+            const response = await fetch('assets/data/publications.json');
+            if (!response.ok) return null;
+            const data = await response.json();
+            if (data && Array.isArray(data.publications) && data.publications.length > 0) {
+                return data.publications;
+            }
+            return null;
+        } catch (error) {
+            console.warn('Cache not available, falling back to live API:', error.message);
+            return null;
+        }
+    }
+
+    // Fetch publications live from ORCID + OA.Works (fallback)
+    async function fetchAndEnrichPublications() {
         const data = await fetchPublications();
 
-        if (!data || !data.group) {
-            showError();
-            hideLoader();
-            return;
-        }
+        if (!data || !data.group) return null;
 
-        // Parse all works
         let publications = data.group
             .map(work => parseWork(work))
-            .filter(pub => pub.year && !isNaN(pub.year)) // Filter out works without valid year
+            .filter(pub => pub.year && !isNaN(pub.year))
             .sort((a, b) => {
-                // Sort by year (descending), then by title
-                if (b.year !== a.year) {
-                    return b.year - a.year;
-                }
+                if (b.year !== a.year) return b.year - a.year;
                 return a.title.localeCompare(b.title);
             })
-            .slice(0, MAX_PUBLICATIONS); // Limit to latest 15
 
-        if (publications.length === 0) {
-            showError();
-            hideLoader();
-            return;
-        }
+        if (publications.length === 0) return null;
 
-        // Enrich publications with metadata from OA.Works API
-        // Process in batches to avoid overwhelming the API
+        // Enrich publications with metadata from OpenAlex API
         const batchSize = 5;
         for (let i = 0; i < publications.length; i += batchSize) {
             const batch = publications.slice(i, i + batchSize);
             await Promise.all(batch.map(async (pub, index) => {
                 publications[i + index] = await enrichPublication(pub);
             }));
+        }
+
+        return publications;
+    }
+
+    // Initialize publications page
+    async function initializePublications() {
+        // Try cache first, fall back to live API
+        let publications = await loadCachedPublications();
+
+        if (!publications) {
+            publications = await fetchAndEnrichPublications();
+        }
+
+        if (!publications || publications.length === 0) {
+            showError();
+            hideLoader();
+            return;
         }
 
         // Group by year

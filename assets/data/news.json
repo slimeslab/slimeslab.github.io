@@ -1,17 +1,43 @@
 [
   {
+    "id": "best-poster-at-tyc-ljc-conference-2026",
+    "title": "Aritra Wins Runner-Up Best Poster Prize at TYC-LJC Conference 2026",
+    "author": "SLIMES Lab",
+    "date": "2026-01-14",
+    "excerpt": "Aritra Roy awarded second prize for his ComProScanner poster at the inaugural Thomas Young Centre – Lennard-Jones Centre Materials and Modelling Conference at QMUL.",
+    "image": "assets/images/news/2026/tyc-ljc-poster-prize.jpg",
+    "link": "news/2026/best-poster-at-tyc-ljc-conference-2026.html",
+    "markdown": "assets/content/news/2026/best-poster-at-tyc-ljc-conference-2026.md",
+    "tags": [
+      "Award",
+      "Conference"
+    ]
+  },
+  {
+    "id": "mcc-vasp-workshop",
+    "title": "SLIMES Lab Hosts MCC-VASP Workshop at LSBU",
+    "author": "SLIMES Lab",
+    "date": "2026-01-25",
+    "excerpt": "SLIMES Lab hosted the MCC-VASP Workshop at London South Bank University, focusing on advanced computational materials science techniques.",
+    "image": "assets/images/news/2026/mcc-vasp-workshop.jpg",
+    "link": "news/2026/mcc-vasp-workshop.html",
+    "markdown": "assets/content/news/2026/mcc-vasp-workshop.md",
+    "tags": [
+      "Workshop"
+    ]
+  },
+  {
     "id": "dynamics-for-gc3n4",
     "title": "1st PhD Publication by Md. Maruf Mridha",
-    "author": "Dr. John Buckeridge",
+    "author": "SLIMES Lab",
     "date": "2025-08-15",
     "excerpt": "1st PhD Publication by Md. Maruf Mridha in The Journal of Physical Chemistry C: Using dynamics to determine the ground state properties of g-C3N4.",
     "image": "assets/images/news/2025/using-dynamics-to-determine-the-ground-state-properties-of-g-C3N4.jpeg",
     "link": "news/2025/using-dynamics-for-g-C3N4.html",
     "markdown": "assets/content/news/2025/using-dynamics-for-g-C3N4.md",
     "tags": [
-      "PhD Publication",
-      "g-C3N4",
-      "Dynamics"
+      "Publication",
+      "Computational"
     ]
   },
   {
@@ -24,8 +50,7 @@
     "link": "news/2024/surray-hills-trip.html",
     "markdown": "assets/content/news/2024/surray-hills-trip.md",
     "tags": [
-      "Team Building",
-      "Outings",
+      "Team",
       "MADD"
     ]
   }

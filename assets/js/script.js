@@ -107,8 +107,27 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Fetch dynamic publication count from publications.json
+function loadPublicationCount() {
+    const counter = document.getElementById('publications-counter');
+    if (!counter) return;
+
+    fetch('assets/data/publications.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data.publications && data.publications.length) {
+                counter.setAttribute('data-target', data.publications.length);
+            }
+        })
+        .catch(() => {
+            // Keep the hardcoded fallback value
+        });
+}
+
 // Observe elements for animations
 document.addEventListener('DOMContentLoaded', function() {
+    loadPublicationCount();
+
     const statsSection = document.querySelector('.stats');
     if (statsSection) {
         observer.observe(statsSection);

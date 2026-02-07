@@ -160,6 +160,22 @@
         container.innerHTML = collaboratorsHTML;
     }
 
+    // Try loading cached collaborators from OpenAlex
+    async function loadCachedCollaborators() {
+        try {
+            const response = await fetch('../assets/data/collaborators.json');
+            if (!response.ok) return null;
+            const data = await response.json();
+            if (data && Array.isArray(data.collaborators) && data.collaborators.length > 0) {
+                return data.collaborators;
+            }
+            return null;
+        } catch (error) {
+            console.warn('Collaborators cache not available, falling back to members.json:', error.message);
+            return null;
+        }
+    }
+
     // Initialize members page
     async function initializeMembersPage() {
         const membersData = await loadMembers();
@@ -178,7 +194,11 @@
             renderAlumni(membersData.alumni);
         }
 
-        if (membersData.collaborators) {
+        // Try cached collaborators first, fall back to static data
+        const cachedCollaborators = await loadCachedCollaborators();
+        if (cachedCollaborators) {
+            renderCollaborators(cachedCollaborators);
+        } else if (membersData.collaborators) {
             renderCollaborators(membersData.collaborators);
         }
     }
