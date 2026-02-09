@@ -116,7 +116,10 @@ function loadPublicationCount() {
         .then(response => response.json())
         .then(data => {
             if (data.publications && data.publications.length) {
-                counter.setAttribute('data-target', data.publications.length);
+                // Round down to nearest 5 (e.g. 64 -> 60)
+                const count = data.publications.length;
+                const rounded = Math.floor(count / 5) * 5;
+                counter.setAttribute('data-target', rounded);
             }
         })
         .catch(() => {

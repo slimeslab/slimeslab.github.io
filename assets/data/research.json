@@ -70,5 +70,14 @@
     "github": "https://github.com/jbuckeridge/cplap",
     "paper": "https://www.sciencedirect.com/science/article/pii/S0010465513002993",
     "documentation": null
+  },
+  {
+    "id": "comproscanner",
+    "title": "ComProScanner",
+    "tag": "software-codes",
+    "image": "assets/images/research/comproscanner.jpeg",
+    "github": "https://github.com/slimeslab/comproscanner",
+    "paper": "https://arxiv.org/abs/2510.20362",
+    "documentation": "https://slimeslab.github.io/ComProScanner/"
   }
 ]
