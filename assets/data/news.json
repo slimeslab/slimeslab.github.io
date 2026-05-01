@@ -1,5 +1,16 @@
 [
   {
+    "id": "comproscanner-published-in-digital-discovery",
+    "title": "ComProScanner Published in Digital Discovery",
+    "author": "SLIMES Lab",
+    "date": "2026-04-05",
+    "excerpt": "ComProScanner — an autonomous multi-agent framework for extracting composition-property data from scientific literature, has been published in Digital Discovery (RSC), achieving an overall accuracy of 0.82 with DeepSeek-V3-0324.",
+    "image": "assets/images/news/2026/comproscanner.jpg",
+    "link": "news/2026/comproscanner-published-in-digital-discovery.html",
+    "markdown": "assets/content/news/2026/comproscanner-published-in-digital-discovery.md",
+    "tags": ["Publication", "AI", "Materials Science"]
+  },
+  {
     "id": "best-poster-at-tyc-ljc-conference-2026",
     "title": "Aritra Wins Runner-Up Best Poster Prize at TYC-LJC Conference 2026",
     "author": "SLIMES Lab",
@@ -8,10 +19,7 @@
     "image": "assets/images/news/2026/tyc-ljc-poster-prize.jpg",
     "link": "news/2026/best-poster-at-tyc-ljc-conference-2026.html",
     "markdown": "assets/content/news/2026/best-poster-at-tyc-ljc-conference-2026.md",
-    "tags": [
-      "Award",
-      "Conference"
-    ]
+    "tags": ["Award", "Conference"]
   },
   {
     "id": "mcc-vasp-workshop",
@@ -22,9 +30,7 @@
     "image": "assets/images/news/2026/mcc-vasp-workshop.jpg",
     "link": "news/2026/mcc-vasp-workshop.html",
     "markdown": "assets/content/news/2026/mcc-vasp-workshop.md",
-    "tags": [
-      "Workshop"
-    ]
+    "tags": ["Workshop"]
   },
   {
     "id": "dynamics-for-gc3n4",
@@ -35,10 +41,7 @@
     "image": "assets/images/news/2025/using-dynamics-to-determine-the-ground-state-properties-of-g-C3N4.jpeg",
     "link": "news/2025/using-dynamics-for-g-C3N4.html",
     "markdown": "assets/content/news/2025/using-dynamics-for-g-C3N4.md",
-    "tags": [
-      "Publication",
-      "Computational"
-    ]
+    "tags": ["Publication", "Computational"]
   },
   {
     "id": "surray-hills-trip",
@@ -49,9 +52,6 @@
     "image": "assets/images/news/2024/surray_hills.webp",
     "link": "news/2024/surray-hills-trip.html",
     "markdown": "assets/content/news/2024/surray-hills-trip.md",
-    "tags": [
-      "Team",
-      "MADD"
-    ]
+    "tags": ["Team", "MADD"]
   }
 ]
