@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T02:38:17.025Z",
+  "lastUpdated": "2026-05-01T03:31:45.674Z",
   "orcidId": "0000-0002-2537-5082",
   "publications": [
     {
@@ -16,9 +16,9 @@
         "Buckeridge, J.",
         "Gattinoni, C."
       ],
-      "volume": null,
-      "issue": null,
-      "pages": null
+      "volume": "5",
+      "issue": "4",
+      "pages": "1794-1808"
     },
     {
       "title": "Exploring the thermodynamics of disordered materials with quantum computing",
