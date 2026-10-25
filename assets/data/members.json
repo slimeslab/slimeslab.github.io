@@ -34,22 +34,21 @@
         "linkedin": "https://linkedin.com/in/aritraroy24",
         "googleScholar": "https://scholar.google.co.uk/citations?user=er7v8VoAAAAJ&hl=en",
         "github": "https://github.com/aritraroy24"
-      }
-    ],
-    "mastersStudents": [],
-    "bachelorsStudents": [
+      },
       {
         "name": "Sivagnanam Sathyan",
         "image": "assets/images/team/sivagnanam-sathyan.jpg",
-        "position": "BEng (Hons) Electrical and Electronic Engineering (FT)",
-        "researchTopic": "Effect of point doping in GaN semiconductor for larger supercell",
+        "position": "1st year PhD Student",
+        "researchTopic": "Ab Initio and Machine Learning Exploration of defect limited Optoelectronic Properties in Nitride Compound Semiconductors",
         "email": "sathyas3@lsbu.ac.uk",
         "website": null,
         "linkedin": "https://www.linkedin.com/in/sathyan-sivagnanam-17071b269/",
         "googleScholar": null,
         "github": null
       }
-    ]
+    ],
+    "mastersStudents": [],
+    "bachelorsStudents": []
   },
   "alumni": [
     {
